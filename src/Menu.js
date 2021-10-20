@@ -1,11 +1,12 @@
 import React from 'react';
 
 const Menu = ({ items }) => {
+
     //const {id, title, category, img, desc} = items;
     return (
         <div className='section-center'>
             {items.map((item) => {
-                const {id, title, price, img, desc} = item;
+                const { id, title, price, img, desc } = item;
                 return (
                     <article key={id} className='menu-item'>
                         <img src={img} alt={title} className='photo' />
