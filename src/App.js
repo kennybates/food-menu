@@ -4,10 +4,20 @@ import Menu from './Menu';
 import Categories from './Categories';
 
 function App() {
+  const [menuItems, setMenuItems] = useState(data);
+  const [categories, setCategories] = useState([]);
+
   return (
-    <div className='container'>
-      <h2>Menu</h2>
-    </div>
+    <main>
+      <section className='menu section'>
+        <div className='title'>
+          <h2>Menu</h2>
+          <div className='underline'></div>
+        </div>
+        <Categories />
+        <Menu items={menuItems}/>
+      </section>
+    </main>
   );
 }
 
